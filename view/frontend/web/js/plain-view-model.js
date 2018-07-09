@@ -16,7 +16,10 @@ define(['ko'], function(ko){
             config: config,
             getTitle: function() {
                 return this.title;
-            }
+            },
+            output: ko.computed(function() {
+                return 'abc';
+            })
         }
     }
 });
