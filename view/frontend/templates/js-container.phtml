@@ -1,0 +1,17 @@
+<?php
+
+ /** var \Magento\Framework\View\Element\Template @block */
+?>
+<script type="text/x-magento-init">
+    {
+      "#target": {
+        "mage2tvjs_coffee": {
+          "base_url" : "<?= $block->escapeJs($block->getBaseUrl()); ?>"
+        }
+      }
+    }
+</script>
+<pre>
+    <div id="target"></div>
+    <div id="target_inline" data-mage-init='{"Mage2tv_Js/js/requirejs-example": {"base_url": "/"}}'></div>
+</pre>

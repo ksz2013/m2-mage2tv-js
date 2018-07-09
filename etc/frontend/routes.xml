@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+	<router id="standard">
+		<route frontName="mage2tv-js" id="mage2tv_js">
+			<module name="Mage2tv_Js"/>
+		</route>
+	</router>
+</config>
