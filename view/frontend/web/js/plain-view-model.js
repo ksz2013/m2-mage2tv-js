@@ -4,8 +4,15 @@ define(['ko'], function(ko){
     // in console for debugging: requirejs('uiRegistry').get('startSimple')
 
     return function(config) {
+        var title = ko.observable('Aloha!');
+        title.subscribe(function(newValue) {
+            console.log('Title Changed to', newValue);
+        });
+        title.subscribe(function(oldValue) {
+            console.log('Will be changed from', oldValue);
+        }, this, 'beforeChange');
         return {
-            title: ko.observable('Aloha!'),
+            title: title,
             config: config,
             getTitle: function() {
                 return this.title;
