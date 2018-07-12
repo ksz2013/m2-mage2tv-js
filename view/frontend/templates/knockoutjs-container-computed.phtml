@@ -1,0 +1,21 @@
+<?php
+
+ /** var \Magento\Framework\View\Element\Template @block */
+?>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "startSimple": {
+                        "component": "Mage2tv_Js/js/plain-view-model-computed",
+                        "base_url": "<?= $block->escapeJs($block->getBaseUrl()) ?>"
+                    }
+                }
+            }
+        }
+    }
+</script>
+<div data-bind="scope: 'startSimple'">
+    <pre data-bind="text: output"></pre>
+</div>
