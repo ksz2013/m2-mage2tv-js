@@ -1,0 +1,34 @@
+<?php
+
+ /** var \Magento\Framework\View\Element\Template @block */
+?>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "startSimple": {
+                        "component": "Mage2tv_Js/js/plain-view-model-observablearray"
+                    }
+                }
+            }
+        }
+    }
+</script>
+<div data-bind="scope: 'startSimple'">
+    <table>
+        <tr>
+            <th data-bind="i18n: 'Currency to'"></th>
+            <th data-bind="i18n: 'Rate'"></th>
+        </tr>
+        <!-- ko  foreach: exchange_rates -->
+        <tr>
+            <td data-bind="text: currency_to"></td>
+            <td data-bind="text: rate"></td>
+        </tr>
+        <!-- /ko -->
+    </table>
+    <ul data-bind="foreach: values">
+       <li data-bind="text: $data"></li>
+    </ul>
+</div>
