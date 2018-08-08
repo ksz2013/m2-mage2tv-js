@@ -1,0 +1,45 @@
+<?php
+
+ /** var \Magento\Framework\View\Element\Template @block */
+?>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "exampleUiComponent": {
+                        "component": "Mage2tv_Js/js/ui-component",
+                        "label": "Json label property",
+                        "config": {
+                           "label": "Some random numbers"
+                        }
+                    },
+                    "infoUiComponent": {
+                        "component": "uiComponent",
+                        "template": "Mage2tv_Js/info",
+                        "children": {
+                           "child1": {
+                              "component": "uiComponent",
+                              "template": "Mage2tv_Js/info",
+                               "children": {
+                                 "child2": {
+                                    "component": "uiComponent",
+                                    "template": "Mage2tv_Js/info"
+                                 }
+                              }
+                           }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<div data-bind="scope: 'exampleUiComponent'">
+   <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<div data-bind="scope: 'infoUiComponent'">
+   <div data-bind="template: getTemplate()"></div>
+</div>
+

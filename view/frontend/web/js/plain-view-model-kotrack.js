@@ -16,6 +16,10 @@ define(['ko'], function(ko){
             }
         });
 
+        ko.getObservable(viewModel, 'additional_charge').subscribe(function(newValue) {
+            console.log('Additional charge changed to: ', newValue);
+        });
+
         return viewModel;
     }
 });
